@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('/scrape-books', [BookController::class, 'scrapeBooks'])->name('scrape-books');
 Route::get('/', [BookController::class, 'index'])->name('index');
+Route::get('/front-end', [BookController::class, 'frontEnd'])->name('frontEnd');

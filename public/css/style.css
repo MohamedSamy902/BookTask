@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #178f6b;
+  --red: #cb5f30;
+  --yellow: #c3e56a;
+  --section: #f8f8f8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--section);
+}
+
+.title {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.brand {
+  background-color: #f8ecc2;
+  color: #cfbf4e;
+  font-weight: 550;
+  padding: .5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.main-btn {
+  background-color: var(--yellow);
+  color: black;
+  font-weight: 525;
+  padding: 0.7rem 1.2rem;
+  border: 0;
+  outline: none;
+}
+.main-btn:hover {
+  background-color: #c8e97a;
+}
+
+.header h1::after {
+  content: '\f18c';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: -25px;
+  color: gray;
+}
+.header h1::before {
+  content: '\f1eb';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: -40px;
+  color: gray;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.search input {
+  padding: 0.7rem 1.2rem;
+  border-color: transparent;
+  width: 375px;
+}
+.search input:focus {
+  box-shadow: none;
+  border-color: #178f6b;
+}
+
+.card {
+  width: 420px;
+  height: 380px;
+  padding: 25px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  margin: auto auto 50px auto;
+}
+.card-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img1 svg {
+  background-color: #ddfced;
+  color: var(--green);
+  padding: 15px;
+  border-radius: 10px;
+}
+.img2 svg {
+  background-color: #e3edb8;
+  color: #5a6d0b;
+  padding: 15px;
+  border-radius: 10px;
+}
+.img3 svg {
+  background-color: #edf0f5;
+  padding: 15px;
+  border-radius: 10px;
+}
+.img4 svg {
+  background-color: #f2e9fc;
+  color: mediumorchid;
+  padding: 15px;
+  border-radius: 10px;
+}
+.img5 svg {
+  background-color: #daf4ff;
+  color: #12527c;
+  padding: 15px;
+  border-radius: 10px;
+}
+.img6 svg {
+  background-color: #fae5e0;
+  color: var(--red);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card-b h3 {
+  font-size: 26px;
+}
+
+.card-u {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-u .user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-u .user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.card-u .user p {
+  font-weight: bold;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.card-p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-p .price span:nth-child(1) {
+  color: var(--green);
+  font-weight: 550;
+  font-size: 18px;
+}
+
+.card-p .price span:nth-child(2) {
+  text-decoration: line-through;
+  font-size: 17px;
+}
+
+.card-p .rate svg {
+  color: #ffc821;
+}
+.card-p .rate {
+  font-weight: 550;
+}
+
+/* Work */
+
+.work {
+  background-color: white;
+}
+
+.work ul li:not(.work .first) {
+  padding-bottom: 50px;
+}
+
+.work ul li {
+  display: -webkit-box;
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .work .list {
+    padding-top: 100px;
+  }
+  .header .search {
+    flex-direction: column;
+  }
+  .work ul li {
+    display: inline-block;
+  }
+  .work .num {
+    margin-bottom: 15px;
+  }
+}
+
+.work .num {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--section);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: black;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 35px;
+}
+.work .num.active {
+  background: linear-gradient(to top, var(--green), rgb(24, 104, 24));
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .work .num:not(.work .num.active)::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background-color: var(--section);
+  top: -50px;
+}
+.work .num.active::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--green), var(--section));
+  bottom: -50px;
+}
+}

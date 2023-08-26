@@ -11,6 +11,9 @@ require_once app_path('Libraries/simple_html_dom.php');
 class BookController extends Controller
 {
 
+    function frontEnd() {
+        return view('frontEnd');
+    }
     public function index(Request $request)
     {
         if ($request->ajax()) {
